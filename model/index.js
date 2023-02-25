@@ -121,7 +121,7 @@ class User {
             data.user_password = hashSync(data.user_password, 15);
         const strQry =
             `
-        UPDATE Users2
+        UPDATE Users
         SET ?
         WHERE user_id = ?;
         `;
@@ -138,7 +138,7 @@ class User {
     deleteUser(req, res) {
         const strQry =
             `
-        DELETE FROM Users2
+        DELETE FROM Users
         WHERE user_id = ?;
         `;
         //db
@@ -158,7 +158,7 @@ class Product {
     fetchProducts(req, res) {
         const strQry = `SELECT product_id, prodName, prodDescription, 
         levels, prodPrice, prodQuantity, imgURL
-        FROM products2;`;
+        FROM products;`;
         con.query(strQry, (err, results) => {
             if (err) throw err;
             res.status(200).json({ results: results })
@@ -167,7 +167,7 @@ class Product {
     fetchProduct(req, res) {
         const strQry = `SELECT product_id, prodName, prodDescription, 
         levels, prodPrice, prodQuantity, imgURL
-        FROM products2
+        FROM products
         WHERE id = ?;`;
         con.query(strQry, [req.params.id], (err, results) => {
             if (err) throw err;
@@ -178,7 +178,7 @@ class Product {
     addProduct(req, res) {
         const strQry =
             `
-        INSERT INTO Products2
+        INSERT INTO Products
         SET ?;
         `;
         con.query(strQry, [req.body],
