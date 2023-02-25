@@ -18,7 +18,8 @@ app.use(route);
 app.use(cors(), cookieParser(), express.json, express.urlencoded({extended: false}));
 // Server Running on...
 app.listen(port, ()=> {
-    console.log(`Server Running on Port:${port}`, `Cancel Server: Ctrl + C`);
+    console.log(`Server Running on Port: ${port}`);
+    console.log(`Stop Server: Ctrl + C`);
 });
 // Handling all errors...
 app.use(errorHandling);
