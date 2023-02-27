@@ -94,7 +94,7 @@ class User {
         }
         // sql query
         const strQry =
-            `INSERT INTO Users2
+            `INSERT INTO Users
         SET ?;`;
         con.query(strQry, [userDetails], (err) => {
             if (err) {
@@ -154,9 +154,8 @@ class User {
 // Products Functionality...
 class Product {
     fetchProducts(req, res) {
-        const strQry = `SELECT product_id, prodName, prodDescription, 
-        levels, prodPrice, prodQuantity, imgURL
-        FROM products;`;
+        const strQry = `SELECT *
+        FROM Products;`;
         con.query(strQry, (err, results) => {
             if (err) throw err;
             res.status(200).json({ results: results })
@@ -176,7 +175,7 @@ class Product {
     addProduct(req, res) {
         const strQry =
             `
-        INSERT INTO Products
+        INSERT INTO Products(prodName, prodDescription, ESRB_Rating, Price, Quantity, imgURL, category) VALUE ("${req.body.prodName}","${req.body.prodDescription}","${req.body.ESRB_Rating}","${req.body.Price}", "${req.body.Quantity}", "${req.body.imgURL}", "${req.body.category}")
         SET ?;
         `;
         con.query(strQry, [req.body],
