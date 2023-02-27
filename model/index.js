@@ -162,10 +162,9 @@ class Product {
         });
     }
     fetchProduct(req, res) {
-        const strQry = `SELECT product_id, prodName, prodDescription, 
-        levels, prodPrice, prodQuantity, imgURL
-        FROM products
-        WHERE id = ?;`;
+        const strQry = `SELECT *
+        FROM Products
+        WHERE product_id = ?;`;
         con.query(strQry, [req.params.id], (err, results) => {
             if (err) throw err;
             res.status(200).json({ results: results })
@@ -174,9 +173,7 @@ class Product {
     }
     addProduct(req, res) {
         const strQry =
-            `
-        INSERT INTO Products(prodName, prodDescription, ESRB_Rating, Price, Quantity, imgURL, category) VALUE ("${req.body.prodName}","${req.body.prodDescription}","${req.body.ESRB_Rating}","${req.body.Price}", "${req.body.Quantity}", "${req.body.imgURL}", "${req.body.category}")
-        SET ?;
+        `INSERT INTO Products  SET ?;
         `;
         con.query(strQry, [req.body],
             (err) => {
@@ -187,7 +184,6 @@ class Product {
                 }
             }
         );
-
     }
     updateProduct(req, res) {
         const strQry =
