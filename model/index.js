@@ -10,7 +10,7 @@ class User {
         const { emailAdd, user_password } = req.body;
         const strQry =
             `
-        SELECT firstName, lastName, gender, emailAdd, user_password, userRole, userProfile
+        SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, user_password, billing_address, shipping_address, userRole, userProfile, joinDate
         FROM Users
         WHERE emailAdd = '${emailAdd}';
         `;
@@ -56,10 +56,8 @@ class User {
     }
     fetchUsers(req, res) {
         const strQry =
-            `
-        SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, userRole, userProfile, joinDate, cart
-        FROM Users;
-        `;
+        `SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, user_password, billing_address, shipping_address, userRole, userProfile, joinDate
+         FROM Users;`;
         //db
         con.query(strQry, (err, data) => {
             if (err) throw err;
@@ -70,8 +68,8 @@ class User {
     fetchUser(req, res) {
         const strQry =
             `
-        SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, userRole, userProfile, joinDate, cart
-        FROM Users
+            SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, user_password, billing_address, shipping_address, userRole, userProfile, joinDate
+            FROM Users
         WHERE user_id = ?;
         `;
         //db
