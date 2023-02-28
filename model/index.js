@@ -94,7 +94,7 @@ class User {
         }
         // sql query
         const strQry =
-            `INSERT INTO Users
+        `INSERT INTO Users
         SET ?;`;
         con.query(strQry, [userDetails], (err) => {
             if (err) {
@@ -118,11 +118,7 @@ class User {
             data.user_password !== undefined)
             data.user_password = hashSync(data.user_password, 15);
         const strQry =
-            `
-        UPDATE Users
-        SET ?
-        WHERE user_id = ?;
-        `;
+        `UPDATE Users SET ? WHERE user_id = ?;`;
         //db
         con.query(strQry, [data, req.params.id],
             (err) => {
@@ -173,9 +169,9 @@ class Product {
     }
     addProduct(req, res) {
         const strQry =
-        `INSERT INTO Products  SET ?;
+        `INSERT INTO Products SET ?;
         `;
-        con.query(strQry, [req.body],
+        con.query(strQry, [req.body, req.params.id],
             (err) => {
                 if (err) {
                     res.status(400).json({ err: "Unable to insert a new record." });
@@ -187,15 +183,11 @@ class Product {
     }
     updateProduct(req, res) {
         const strQry =
-            `
-        UPDATE Products
-        SET ?
-        WHERE product_id = ?
-        `;
+        `UPDATE Products SET ? WHERE product_id = ?;`;
         con.query(strQry, [req.body, req.params.id],
             (err) => {
                 if (err) {
-                    res.status(400).json({ err: "Unable to update a record." });
+                    res.status(400).json({err});
                 } else {
                     res.status(200).json({ msg: "Product updated" });
                 }
