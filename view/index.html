@@ -8,8 +8,51 @@
     <title>Home</title>
 </head>
 <body>
+    <hr>
     <center>
-        <h2>Route Description</h2>
+        <h2>Users Route Description</h2>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>FetchUsers</td>
+            <td>/users</td>
+            <td>get: Gets All Users</td>
+        </tr>
+        <tr>
+            <td>FetchUser</td>
+            <td>/users/:id</td>
+            <td>get: Gets a Single User</td>
+        </tr>
+        <tr>
+            <td>CreateUser</td>
+            <td>/register</td>
+            <td>post: A User</td>
+        </tr>
+        <tr>
+            <td>LoginUser</td>
+            <td>/login</td>
+            <td>post: A User</td>
+        </tr>
+        <tr>
+            <td>UpdateProduct</td>
+            <td>/products/:id</td>
+            <td>put: Update a User</td>
+        </tr>
+        <tr>
+            <td>DeleteUser</td>
+            <td>/users/:id</td>
+            <td>delete: Delete a User</td>
+        </tr>
+    </table>
+    </center>
+    <br>
+    <hr>
+    <center>
+        <h2>Product Route Description</h2>
     <table>
         <tr>
             <th>Method</th>
@@ -19,29 +62,30 @@
         <tr>
             <td>FetchProducts</td>
             <td>/products</td>
-            <td>Get All Products</td>
+            <td>get: Gets All Products</td>
         </tr>
         <tr>
             <td>FetchProduct</td>
             <td>/products/:id</td>
-            <td>Get Single Product</td>
+            <td>get: Gets a Single Product</td>
         </tr>
         <tr>
             <td>AddProduct</td>
             <td>/products</td>
-            <td>Post A Product</td>
+            <td>post: Adds a Product</td>
         </tr>
         <tr>
             <td>UpdateProduct</td>
             <td>/products/:id</td>
-            <td>Put a Product</td>
+            <td>put: Update a Product</td>
         </tr>
         <tr>
             <td>DeleteProduct</td>
             <td>/products/:id</td>
-            <td>Delete a Product</td>
+            <td>delete: Delete a Product</td>
         </tr>
     </table>
     </center>
+    <hr>
 </body>
 </html>
