@@ -9,11 +9,9 @@ class User {
     login(req, res) {
         const { emailAdd, user_password } = req.body;
         const strQry =
-            `
-        SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, user_password, billing_address, shipping_address, userRole, userProfile, joinDate
+        `SELECT user_id, firstName, lastName, gender, cellphoneNumber, emailAdd, user_password, billing_address, shipping_address, userRole, userProfile, joinDate
         FROM Users
-        WHERE emailAdd = '${emailAdd}';
-        `;
+        WHERE emailAdd = '${emailAdd}';`;
         con.query(strQry, async (err, data) => {
             if (err) throw err;
             if ((!data.length) || (data == null)) {
