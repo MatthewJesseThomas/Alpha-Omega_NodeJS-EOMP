@@ -20,7 +20,7 @@ route.get('^/$|/alpha-omega-gaming', (req, res)=>{
 });
 // =========USER Router========
 // User Login, Logging In... Route Setup
-route.get('/login', bodyParser.json(), (req, res)=>{
+route.post('/login', bodyParser.json(), (req, res)=>{
     user.login(req, res);
 });
 // Retrieving all Known Users... Route
