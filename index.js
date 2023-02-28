@@ -22,4 +22,4 @@ app.listen(port, ()=> {
     console.log(`Stop Server: Ctrl + C`);
 });
 // Handling all errors...
-// app.use(errorHandling);
+app.use(errorHandling);
