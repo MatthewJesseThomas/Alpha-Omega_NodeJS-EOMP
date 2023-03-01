@@ -112,16 +112,17 @@ class User {
     }
     updateUser(req, res) {
         let data = req.body;
-        if (data.user_password !== null ||
-            data.user_password !== undefined)
-            data.user_password = hashSync(data.user_password, 15);
+        // console.log(data);
+        // console.log(req.params.id)
+        // if (data.user_password !== null ||
+        //     data.user_password !== undefined) data.user_password = hashSync(data.user_password, 15);
         const strQry =
         `UPDATE Users SET ? WHERE user_id = ?;`;
         //db
         con.query(strQry, [data, req.params.id],
             (err) => {
-                if (err) throw err;
-                res.status(200).json({
+                if (err) console.log(err);
+                else res.status(200).json({
                     msg:
                         "A row was affected"
                 });
