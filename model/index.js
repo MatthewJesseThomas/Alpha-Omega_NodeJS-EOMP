@@ -162,8 +162,8 @@ class Product {
         WHERE product_id = ?;`;
         con.query(strQry, [req.params.id], (err, results) => {
             if (err) throw err;
-            res.status(200).json({ results: results })
-        });                 
+            res.status(200).json({ results: results });
+        });
 
     }
     addProduct(req, res) {
