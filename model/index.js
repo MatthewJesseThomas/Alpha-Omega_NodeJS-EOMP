@@ -17,7 +17,7 @@ class User {
             if ((!data.length) || (data == null)) {
                 res.status(401).json({
                     err:
-                        "You provide a wrong email address"
+                        "You Have Provided A Invalid Email Address!!!"
                 });
             } else {
                 await compare(user_password,
@@ -45,7 +45,7 @@ class User {
                             })
                         } else {
                             res.status(401).json({
-                                err: 'You entered an invalid password or did not register. '
+                                err: 'You Entered An Invalid Password Or Have Not Registered Yet. '
                             })
                         }
                     })
@@ -106,7 +106,7 @@ class User {
                     maxAge: 3600000,
                     httpOnly: true
                 });
-                res.status(200).json({ msg: "A user record was saved." })
+                res.status(200).json({ msg: "A New User Record was Created & Saved." })
             }
         })
     }
@@ -124,7 +124,7 @@ class User {
                 if (err) console.log(err);
                 else res.status(200).json({
                     msg:
-                        "A row was affected"
+                        "A Row Was Affected"
                 });
             })
     }
@@ -140,7 +140,7 @@ class User {
                 if (err) throw err;
                 res.status(200).json({
                     msg:
-                        "A record was removed from a database"
+                        "A User Record Was Removed From Our DataBase..."
                 });
             })
     }
@@ -173,9 +173,9 @@ class Product {
         con.query(strQry, [req.body, req.params.id],
             (err) => {
                 if (err) {
-                    res.status(400).json({ err: "Unable to insert a new record." });
+                    res.status(400).json({ err: "Unable to Insert Into a New Record." });
                 } else {
-                    res.status(200).json({ msg: "Product saved" });
+                    res.status(200).json({ msg: "Product saved!!!" });
                 }
             }
         );
@@ -188,7 +188,7 @@ class Product {
                 if (err) {
                     res.status(400).json({err});
                 } else {
-                    res.status(200).json({ msg: "Product updated" });
+                    res.status(200).json({ msg: "Product Details Updated." });
                 }
             }
         );
@@ -202,7 +202,7 @@ class Product {
         `;
         con.query(strQry, [req.params.id], (err) => {
             if (err) res.status(400).json({ err: "The record was not found." });
-            res.status(200).json({ msg: "A product was deleted." });
+            res.status(200).json({ msg: "A Product Was Deleted." });
         })
     }
 
