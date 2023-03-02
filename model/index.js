@@ -163,7 +163,7 @@ class Product {
         con.query(strQry, [req.params.id], (err, results) => {
             if (err) throw err;
             res.status(200).json({ results: results })
-        });
+        });                 
 
     }
     addProduct(req, res) {
