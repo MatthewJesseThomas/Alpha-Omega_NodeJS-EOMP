@@ -7,7 +7,7 @@ import store from './store'
 import style from './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap' 
-import script from '../script'
+
 
 createApp(App).use(store).use(router).mount('#app')
 
