@@ -114,6 +114,7 @@ class User {
         let data = req.body;
         // console.log(data);
         // console.log(req.params.id)
+        // alert(`message`)
         // if (data.user_password !== null ||
         //     data.user_password !== undefined) data.user_password = hashSync(data.user_password, 15);
         const strQry =
