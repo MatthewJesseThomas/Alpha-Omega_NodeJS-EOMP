@@ -1,38 +1,45 @@
 <template>
 	<div class="AddProduct">
-			<table border="5">
+			<table>
  <tr> 
     <th></th>
-    <th>Column Header 1</th>
-    <th>Column Header 2</th>
-    <th>Column Header 3</th>
+    <th>Name:</th>
+    <th>Price</th>
+    <th>ESRB Rating</th>
   </tr>
   <tr>
-    <th>Row Header 1</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
+    <th>Playstation</th>
+    <td>God Of War</td>
+    <td>1000</td>
+    <td>18+</td>
   </tr>
   <tr> 
-    <th>Row Header 2</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
+    <th>Xbox</th>
+    <td>Halo: Infinite</td>
+    <td>899</td>
+    <td>18+</td>
  </tr>
  <tr> 
-    <th>Row Header 3</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
+    <th>PC</th>
+    <td>Company of heroes 3</td>
+    <td>500</td>
+    <td>16+</td>
+ </tr>
+ <tr> 
+    <th>Nintendo</th>
+    <td>Pokemon Legends</td>
+    <td>250</td>
+    <td>3+</td>
  </tr>
 </table>
-<button>ADD PRODUCT</button>
-		</div>
+
+</div>
 </template>
 <script>
 
 export default{
 	// eslint-disable-next-line vue/multi-word-component-names
 	name:'AddProduct'
-}
+};
+
 </script>

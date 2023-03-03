@@ -26,6 +26,7 @@
     <td>Data</td>
  </tr>
 </table>
+<button>Forgot Password?</button>
 	</div>
 </template>
 <script>

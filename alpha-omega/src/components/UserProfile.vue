@@ -28,6 +28,7 @@
 </table>
 		
 	</div>
+	<button>Check User Profile</button>
 </template>
 <script>
 
