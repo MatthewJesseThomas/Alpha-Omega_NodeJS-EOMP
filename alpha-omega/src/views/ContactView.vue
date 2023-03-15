@@ -4,7 +4,7 @@
 	<ContactForm/>
 </template>
 <script>
-import ContactForm from '@/components/ProductComponent.vue'
+import ContactForm from '@/components/ContactForm.vue'
 export default{
 	components:{
 		ContactForm

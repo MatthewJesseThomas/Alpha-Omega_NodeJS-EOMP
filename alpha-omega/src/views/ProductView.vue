@@ -4,12 +4,10 @@
 	<Products/>
 </template>
 <script>
-import Products from '@/components/ProductComponent.vue'
+import Products from '../components/ProductsComp.vue'
 export default{
 	components:{
 		Products
 	}
 }
-
-
 </script>

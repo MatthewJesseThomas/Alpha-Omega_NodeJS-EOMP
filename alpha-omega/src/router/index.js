@@ -14,42 +14,34 @@ import RegisterView from '../views/RegisterView.vue';
 		name: 'home',
 		component: HomeView
 	},
+	{
+		path:'/login',
+		name:'login',
+		component: LoginView.vue
+	},
+	{
+	path: '/admin',
+	name: 'admin',
+	component: AdminView.vue
+	},
 {
-		path:'/Login',
-		name:'Login',
-		component: function(){
-			return import("../views/LoginView.vue")
-		},
+	path: '/contact',
+	name: 'contact',
+	component: ContactView.vue
 
 },
 {
-	path: '/Admin',
-	name: 'Admin',
-	component: function(){
-		return import("../views/AdminView.vue")
-	}
-},
-{
-	path: '/Contact',
-	name: 'Contact',
-	component: function(){
-		return import("../views/ContactView.vue")
-	}
-},
-{
-	path: '/Products',
+	path: '/products',
 	name: 'Products',
-	component: function(){
-		return import("../views/ProductView.vue")
-	}
+	component: ProductView.vue
+	
 },
 {
-	path: '/Register',
-	name: 'Register',
-	component: function(){
-		return import("../views/RegisterView.vue")
-	}
-},
+	path: '/register',
+	name: 'register',
+	component: RegisterView.vue
+	
+}
 
 	]
 

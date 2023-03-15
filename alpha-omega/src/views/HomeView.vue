@@ -1,19 +1,14 @@
 <template>
-	<NavBar/>
 	<div class="home">
-	<HelloWorld/>
+	<h1>Hello Gamers!!!</h1>
   </div>
+  <Carousel/>
 </template>
 <script>
-// @ is an alias to /src
- import NavBar from '@/components/NavBar.vue'
- import HelloWorld from '@/components/HelloWorld.vue'
-
+import Carousel from "../components/CarouselComponent.vue"
  export default {
-   name: 'HomeView',
    components: {
-	NavBar,
-     HelloWorld
+	Carousel
    }
  }
 </script>
