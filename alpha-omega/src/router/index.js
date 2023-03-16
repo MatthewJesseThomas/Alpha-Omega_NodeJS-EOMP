@@ -17,29 +17,29 @@ import RegisterView from '../views/RegisterView.vue';
 	{
 		path:'/login',
 		name:'login',
-		component: LoginView.vue
+		component: LoginView
 	},
 	{
 	path: '/admin',
 	name: 'admin',
-	component: AdminView.vue
+	component: AdminView
 	},
 {
 	path: '/contact',
 	name: 'contact',
-	component: ContactView.vue
+	component: ContactView
 
 },
 {
 	path: '/products',
 	name: 'Products',
-	component: ProductView.vue
+	component: ProductView
 	
 },
 {
 	path: '/register',
 	name: 'register',
-	component: RegisterView.vue
+	component: RegisterView
 	
 }
 
