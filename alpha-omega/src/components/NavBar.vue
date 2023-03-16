@@ -36,11 +36,11 @@
   <div class="subnav">
     <button class="subnavbtn"><img src="https://img.icons8.com/ios-filled/50/null/login-rounded-right.png"/>Login/Register <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="@views/RegisterView.vue">Register</a>
-      <a href="@views/LoginView.vue">Login</a>
+      <a href="../views/RegisterView.vue">Register</a>
+      <a href="../views/LoginView.vue">Login</a>
     </div>
   </div>
-  <a href="@views/AdminView.vue"><img src="https://img.icons8.com/ios-filled/50/null/administrator-male--v1.png"/>Admin</a>
+  <a href="../views/AdminView.vue"><img src="https://img.icons8.com/ios-filled/50/null/administrator-male--v1.png"/>Admin</a>
   </div>
   </div>
 
