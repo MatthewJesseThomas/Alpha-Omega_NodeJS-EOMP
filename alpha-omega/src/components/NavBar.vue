@@ -29,7 +29,7 @@
   <div class="subnav">
     <button class="subnavbtn"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/null/external-games-gaming-kiranshastry-solid-kiranshastry.png"/>Products <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-	<a href="../components/Login.vue">PC</a>
+	<a href="../views/ProductView.vue">PC</a>
      
     </div>
   </div>
