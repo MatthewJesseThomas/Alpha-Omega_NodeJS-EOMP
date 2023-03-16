@@ -4,7 +4,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	color: red
+	color: rgb(22, 12, 105,19);
 
 	
 };
@@ -40,7 +40,7 @@ display: block;
   .navbar a {
 	float: left;
 	font-size: 16px;
-	color: white;
+	color: rgba(10, 45, 45, 0.87);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -57,14 +57,14 @@ display: block;
 	font-size: 16px;
 	border: none;
 	outline: none;
-	color: white;
+	color: rgba(10, 45, 45, 2);
 	padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
   }
   
-  /* Add a red background color to navigation links on hover */
+  /* Add a  background color to navigation links on hover */
   .navbar a:hover, .subnav:hover .subnavbtn {
 	background-color: silver;
   }
@@ -100,7 +100,7 @@ display: block;
   /* FOOTER */
   .Footer{
 	padding: auto;
-	background-color: red;
+	background-color: rgb(111, 233, 222,19);
 	position: fixed; bottom:0;
 	width: 100%;
   }
@@ -112,8 +112,8 @@ display: block;
 
   /* BANNER */ 
   #banner {
-	background-color: red;
-	box-shadow: white 10px 10px 10px;
+	background-color: rgb(111, 233, 222,19);
+	box-shadow: #111 10px 10px 10px;
 	  height: 10vh;
 	  width: 100%;
 	  display: flex;
